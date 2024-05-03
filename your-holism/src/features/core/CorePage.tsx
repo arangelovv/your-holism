@@ -3,7 +3,7 @@ import { AppBar, Button, Toolbar, Typography } from "@mui/material";
 import { tabs } from "./core.config";
 import TabsComponent from "../../shared/ui/organisms/tabs.org";
 
-function AppCore() {
+export default function AppCorePage() {
   return (
     <div className="core-container">
       <AppBar
@@ -33,5 +33,3 @@ function AppCore() {
     </div>
   );
 }
-
-export default AppCore;
