@@ -1,7 +1,7 @@
 import { useState, SyntheticEvent } from "react";
 import { TabContext, TabList, TabPanel } from "@mui/lab";
 import { Box, Tab } from "@mui/material";
-import { TabsConfig } from "../models/tabs-config";
+import { TabsOrganismConfig } from "../models/tabs.config";
 import { Link, Outlet } from "react-router-dom";
 
 /**
@@ -10,9 +10,9 @@ import { Link, Outlet } from "react-router-dom";
  * @param {object} props - The parameter props represents the props object passed to the TabsComponent function. It contains configuration data necessary for rendering the tabs.
  * Each object should conform to the TabsConfig interface.
  */
-export default function TabsComponent({ tabs }: any) {
+export default function TabsOrganism({ tabs }: any) {
   const [value, setValue] = useState("1");
-  const tabsItems: TabsConfig[] = tabs;
+  const tabsItems: TabsOrganismConfig[] = tabs;
 
   const handleChange = (event: SyntheticEvent, newValue: string) => {
     setValue(newValue);

@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import { TabsConfig } from "../../shared/ui/models/tabs-config";
+import { TabsOrganismConfig } from "../../shared/ui/models/tabs.config";
 
 const months: string[] = [
   "January",
@@ -18,7 +18,7 @@ const months: string[] = [
 const currentDate: Date = new Date();
 const currentMonth: string = months[currentDate.getMonth()];
 
-export const tabs: TabsConfig[] = [
+export const tabsConfig: TabsOrganismConfig[] = [
   { label: "Journal", index: "1", herf: "journal" },
   {
     label: `${currentMonth} Stats`,

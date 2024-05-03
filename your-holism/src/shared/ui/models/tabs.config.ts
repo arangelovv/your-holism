@@ -1,4 +1,4 @@
-export interface TabsConfig {
+export interface TabsOrganismConfig {
   label: string;
   index: string;
   herf: string;
