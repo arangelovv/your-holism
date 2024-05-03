@@ -1,5 +1,7 @@
-import { Outlet } from "react-router-dom";
-import { AppBar, Button, IconButton, Toolbar, Typography } from "@mui/material";
+import { AppBar, Button, Toolbar, Typography } from "@mui/material";
+
+import { tabs } from "./core.config";
+import TabsComponent from "../../shared/ui/organisms/tabs.org";
 
 function AppCore() {
   return (
@@ -7,12 +9,12 @@ function AppCore() {
       <AppBar
         position="static"
         sx={{
-          backgroundColor: "#2DC27D",
+          backgroundColor: "#1EAC6A",
           paddingLeft: "30px",
           paddingRight: "20px",
         }}
       >
-        <Toolbar sx={{ backgroundColor: "#2DC27D", paddingLeft: "50px" }}>
+        <Toolbar sx={{ backgroundColor: "#1EAC6A", paddingLeft: "50px" }}>
           <Typography
             variant="h5"
             component="div"
@@ -27,7 +29,7 @@ function AppCore() {
           <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
-      <Outlet />
+      <TabsComponent tabs={tabs} />
     </div>
   );
 }
