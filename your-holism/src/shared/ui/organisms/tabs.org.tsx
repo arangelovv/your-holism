@@ -3,6 +3,7 @@ import { TabContext, TabList, TabPanel } from "@mui/lab";
 import { Box, Tab } from "@mui/material";
 import { TabsOrganismConfig } from "../models/tabs.config";
 import { Link, Outlet } from "react-router-dom";
+import PhoneMissedIcon from "@mui/icons-material/PhoneMissed";
 
 /**
  * TabsComponent encompasses the MUI's TabList  and react-router for easier setup of navigation through tabs
@@ -29,6 +30,8 @@ export default function TabsOrganism({ tabs }: any) {
                 value={tab.index}
                 component={Link}
                 to={tab.herf}
+                icon={tab.icon}
+                iconPosition={tab.iconPosition}
               />
             ))}
           </TabList>

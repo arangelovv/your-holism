@@ -19,7 +19,11 @@ const currentDate: Date = new Date();
 const currentMonth: string = months[currentDate.getMonth()];
 
 export const tabsConfig: TabsOrganismConfig[] = [
-  { label: "Journal", index: "1", herf: "journal" },
+  {
+    label: "Journal",
+    index: "1",
+    herf: "journal",
+  },
   {
     label: `${currentMonth} Stats`,
     index: "2",
@@ -35,6 +39,4 @@ export const appBarConfig: AppBarOrganismConfig = {
   color: "#00cf69",
   position: "sticky",
   title: "Your Holism",
-  titleColor: "black",
-  fontWeight: "500",
 };
