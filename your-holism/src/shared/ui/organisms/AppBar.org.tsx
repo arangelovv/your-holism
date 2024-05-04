@@ -1,5 +1,6 @@
 import { AppBar, Toolbar, Typography, Button } from "@mui/material";
 import { AppBarOrganismConfig } from "../models/app-bar.config";
+import TypographyAtom from "../atoms/TypographyAtom";
 
 export default function AppBarOrganism({
   color,
@@ -7,8 +8,6 @@ export default function AppBarOrganism({
   paddingLeft,
   paddingRight,
   title,
-  titleColor,
-  fontWeight,
 }: AppBarOrganismConfig) {
   return (
     <AppBar
@@ -21,17 +20,12 @@ export default function AppBarOrganism({
     >
       <Toolbar>
         {!!title ? (
-          <Typography
+          <TypographyAtom
             variant="h5"
-            component="div"
-            sx={{
-              flexGrow: 1,
-              color: `${titleColor}`,
-              fontWeight: `${fontWeight}`,
-            }}
-          >
-            {title}
-          </Typography>
+            text={title}
+            color="black"
+            fontWeight="500"
+          />
         ) : null}
       </Toolbar>
     </AppBar>
