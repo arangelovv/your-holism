@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { AppBarOrganismConfig } from "../../shared/ui/models/app-bar.config";
 import { TabsOrganismConfig } from "../../shared/ui/models/tabs.config";
 
 const months: string[] = [
@@ -31,3 +31,10 @@ export const tabsConfig: TabsOrganismConfig[] = [
     herf: "all-time-stats",
   },
 ];
+export const appBarConfig: AppBarOrganismConfig = {
+  color: "#00cf69",
+  position: "sticky",
+  title: "Your Holism",
+  titleColor: "black",
+  fontWeight: "500",
+};
