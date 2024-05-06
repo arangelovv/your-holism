@@ -6,7 +6,9 @@ export default function AppCorePage() {
   return (
     <div className="core-container">
       <AppBarOrganism {...appBarConfig} />
-      <TabsOrganism tabs={tabsConfig} />
+      <div>
+        <TabsOrganism tabs={tabsConfig} />
+      </div>
     </div>
   );
 }

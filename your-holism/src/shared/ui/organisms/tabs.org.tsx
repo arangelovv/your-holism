@@ -20,7 +20,16 @@ export default function TabsOrganism({ tabs }: any) {
   };
 
   return (
-    <Box sx={{ width: "100%", typography: "body1" }}>
+    <Box
+      sx={{
+        width: "100%",
+        typography: "body1",
+        paddingLeft: "10px",
+        paddingRight: "10px",
+        backgroundColor: "#fafafa",
+        height: "100vh",
+      }}
+    >
       <TabContext value={value}>
         <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
           <TabList onChange={handleChange} variant="fullWidth">
@@ -32,6 +41,7 @@ export default function TabsOrganism({ tabs }: any) {
                 to={tab.herf}
                 icon={tab.icon}
                 iconPosition={tab.iconPosition}
+                sx={{ textTransform: "none" }}
               />
             ))}
           </TabList>

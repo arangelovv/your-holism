@@ -4,4 +4,5 @@ export interface AppBarOrganismConfig {
   paddingLeft?: string;
   paddingRight?: string;
   title?: string;
+  titleColor?: string;
 }
