@@ -1,8 +1,8 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import AppCore from "./features/core/CorePage";
-import JournalPage from "./features/journal/JournalPage";
-import MonthlyStatsPage from "./features/monthly-stats/MonthlyStatsPage";
-import AllStatsPage from "./features/all-stats/AllStatsPage";
+import JournalPage from "./features/$journal/JournalPage";
+import MonthlyStatsPage from "./features/$monthly/MonthlyStatsPage";
+import AllStatsPage from "./features/$overall/AllStatsPage";
 
 export const router = createBrowserRouter([
   {
@@ -18,8 +18,8 @@ export const router = createBrowserRouter([
         element: <Navigate to="journal" />,
       },
       { path: "journal", element: <JournalPage /> },
-      { path: "monthly-stats", element: <MonthlyStatsPage /> },
-      { path: "all-time-stats", element: <AllStatsPage /> },
+      { path: "monthly", element: <MonthlyStatsPage /> },
+      { path: "overall", element: <AllStatsPage /> },
     ],
   },
 ]);

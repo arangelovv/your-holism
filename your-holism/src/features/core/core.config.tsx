@@ -27,12 +27,12 @@ export const tabsConfig: TabsOrganismConfig[] = [
   {
     label: `${currentMonth} Stats`,
     index: "2",
-    herf: "monthly-stats",
+    herf: "monthly",
   },
   {
-    label: "All time stats",
+    label: "Overall Stats",
     index: "3",
-    herf: "all-time-stats",
+    herf: "overall",
   },
 ];
 export const appBarConfig: AppBarOrganismConfig = {
