@@ -40,4 +40,6 @@ export const appBarConfig: AppBarOrganismConfig = {
   position: "sticky",
   title: "Your Holism",
   titleColor: "white",
+  paddingLeft: "5px",
+  paddingRight: "5px",
 };

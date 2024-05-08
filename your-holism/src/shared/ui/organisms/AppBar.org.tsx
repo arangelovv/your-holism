@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, Typography, Button } from "@mui/material";
+import { AppBar, Toolbar, Typography, Button, Box } from "@mui/material";
 import { AppBarOrganismConfig } from "../models/app-bar.config";
 import TypographyAtom from "../atoms/TypographyAtom";
 import { NoEncryptionTwoTone } from "@mui/icons-material";

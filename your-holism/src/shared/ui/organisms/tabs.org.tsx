@@ -22,7 +22,6 @@ export default function TabsOrganism({ tabs }: any) {
   return (
     <Box
       sx={{
-        width: "100%",
         typography: "body1",
         paddingLeft: "10px",
         paddingRight: "10px",
