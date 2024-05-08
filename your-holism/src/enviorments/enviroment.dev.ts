@@ -1,4 +1,5 @@
 export const firebaseConfig = {
+  production: false,
   apiKey: process.env.PUBLIC_API_KEY,
   authDomain: process.env.AUTH_DOMAIN,
   projectId: "your-holism",
