@@ -18,4 +18,5 @@ export interface TypographyAtomConfig {
   text: string;
   color?: string;
   fontWeight?: string;
+  flexGrow?: string;
 }

@@ -10,7 +10,8 @@ export default function AppBarOrganism({
   title,
   titleColor,
   borderRadius,
-}: AppBarOrganismConfig) {
+  children,
+}: AppBarOrganismConfig & { children?: React.ReactNode }) {
   return (
     <AppBar
       position={(position = "static")}
@@ -29,8 +30,10 @@ export default function AppBarOrganism({
             text={title}
             color={titleColor}
             fontWeight="500"
+            flexGrow="1"
           />
         ) : null}
+        {children}
       </Toolbar>
     </AppBar>
   );

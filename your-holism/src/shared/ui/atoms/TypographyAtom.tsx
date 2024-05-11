@@ -7,6 +7,7 @@ export default function TypographyAtom({
   text,
   color,
   fontWeight,
+  flexGrow,
 }: TypographyAtomConfig) {
   return (
     <Typography
@@ -14,7 +15,7 @@ export default function TypographyAtom({
       align={align}
       component="div"
       sx={{
-        flexGrow: 1,
+        flexGrow: `${flexGrow}`,
         color: `${color}`,
         fontWeight: `${fontWeight}`,
       }}

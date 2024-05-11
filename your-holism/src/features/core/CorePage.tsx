@@ -6,7 +6,7 @@ import { Box } from "@mui/material";
 export default function AppCorePage() {
   return (
     <Box sx={{ padding: "5px" }}>
-      <AppBarOrganism {...appBarConfig} />
+      <AppBarOrganism {...appBarConfig}></AppBarOrganism>
       <TabsOrganism tabs={tabsConfig} />
     </Box>
   );
