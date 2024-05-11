@@ -5,6 +5,4 @@ import { firebaseConfig } from "../../enviorments/enviroment.dev";
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 
-if (firebaseConfig.production == false) {
-  connectAuthEmulator(auth, "http://127.0.0.1:9099");
-}
+connectAuthEmulator(auth, "http://127.0.0.1:9099");

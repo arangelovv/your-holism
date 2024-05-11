@@ -6,7 +6,7 @@ import {
   signOut,
 } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
-import { auth } from "../../utils/firebase";
+import { auth } from "../firebase";
 
 //Signing in with Google Auth Provider
 export function signInWithGoogle() {

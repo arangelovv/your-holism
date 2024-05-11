@@ -3,11 +3,16 @@ import AppCore from "./features/core/CorePage";
 import JournalPage from "./features/$journal/JournalPage";
 import MonthlyStatsPage from "./features/$monthly/MonthlyStatsPage";
 import AllStatsPage from "./features/$overall/AllStatsPage";
+import AuthPage from "./features/$authenticate/AuthPage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Navigate to="/core" />,
+  },
+  {
+    path: "/auth",
+    element: <AuthPage />,
   },
   {
     path: "/core",
