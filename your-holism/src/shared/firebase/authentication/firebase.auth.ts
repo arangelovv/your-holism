@@ -4,6 +4,7 @@ import {
   onAuthStateChanged,
   signInWithPopup,
   signOut,
+  User,
 } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import { auth } from "../firebase";
@@ -27,12 +28,6 @@ export function authSignOut() {
   console.warn("User Signed out...");
 }
 
-//Getting current logged in user
-export function getCurrentUser() {
-  const user = auth.currentUser;
-  return user;
-}
-
 export function useAuthState(auth: Auth) {
   const [authState, setAuthState] = useState<string | null>(null);
 
@@ -48,4 +43,16 @@ export function useAuthState(auth: Auth) {
   }, [auth]);
 
   return authState;
+}
+
+export function useCurrentUser(auth: Auth) {
+  const [currentUser, setCurrentUser] = useState<User | null>(null); // Initial state: no user
+
+  useEffect(() => {
+    const listener = onAuthStateChanged(auth, (user) => {
+      setCurrentUser(user);
+    });
+    return () => listener();
+  }, [auth]);
+  return currentUser;
 }
