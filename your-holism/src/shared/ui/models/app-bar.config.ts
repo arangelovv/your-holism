@@ -5,4 +5,5 @@ export interface AppBarOrganismConfig {
   paddingRight?: string;
   title?: string;
   titleColor?: string;
+  borderRadius: string;
 }

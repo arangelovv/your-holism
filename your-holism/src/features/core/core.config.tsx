@@ -36,10 +36,11 @@ export const tabsConfig: TabsOrganismConfig[] = [
   },
 ];
 export const appBarConfig: AppBarOrganismConfig = {
-  color: "#673ab7",
+  color: "#e6e6e6",
   position: "sticky",
   title: "Your Holism",
-  titleColor: "white",
+  titleColor: "#333333",
   paddingLeft: "5px",
   paddingRight: "5px",
+  borderRadius: "10px",
 };

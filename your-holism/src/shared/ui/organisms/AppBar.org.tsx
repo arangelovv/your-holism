@@ -1,7 +1,6 @@
-import { AppBar, Toolbar, Typography, Button, Box } from "@mui/material";
+import { AppBar, Toolbar } from "@mui/material";
 import { AppBarOrganismConfig } from "../models/app-bar.config";
 import TypographyAtom from "../atoms/TypographyAtom";
-import { NoEncryptionTwoTone } from "@mui/icons-material";
 
 export default function AppBarOrganism({
   color,
@@ -10,6 +9,7 @@ export default function AppBarOrganism({
   paddingRight,
   title,
   titleColor,
+  borderRadius,
 }: AppBarOrganismConfig) {
   return (
     <AppBar
@@ -19,6 +19,7 @@ export default function AppBarOrganism({
         paddingLeft: `${paddingLeft}`,
         paddingRight: `${paddingRight}`,
         boxShadow: "none",
+        borderRadius: `${borderRadius}`,
       }}
     >
       <Toolbar>

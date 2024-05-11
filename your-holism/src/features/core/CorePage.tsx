@@ -1,14 +1,13 @@
 import AppBarOrganism from "../../shared/ui/organisms/AppBar.org";
 import TabsOrganism from "../../shared/ui/organisms/Tabs.org";
 import { tabsConfig, appBarConfig } from "./core.config";
+import { Box } from "@mui/material";
 
 export default function AppCorePage() {
   return (
-    <div className="core-container">
+    <Box sx={{ padding: "5px" }}>
       <AppBarOrganism {...appBarConfig} />
-      <div>
-        <TabsOrganism tabs={tabsConfig} />
-      </div>
-    </div>
+      <TabsOrganism tabs={tabsConfig} />
+    </Box>
   );
 }
