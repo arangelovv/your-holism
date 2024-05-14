@@ -6,19 +6,33 @@ import {
   signOut,
   User,
 } from "firebase/auth";
-import { createContext, useEffect, useState } from "react";
-import { auth } from "../firebase";
+import { useEffect, useState } from "react";
+import { auth, firestore } from "../firebase";
+import { doc, getDoc, setDoc } from "firebase/firestore";
 
 //Signing in with Google Auth Provider
 export function signInWithGoogle() {
   const googleProvider = new GoogleAuthProvider();
-  signInWithPopup(auth, googleProvider).then((result) => {
+  signInWithPopup(auth, googleProvider).then(async (result) => {
     const user = result.user;
     console.warn(
       `User Logged In => ${"\n"} UID: ${user.uid}, Username: ${
         user.displayName
       }`
     );
+    const docRef = doc(firestore, "users", `${user.uid}`);
+    const docSnap = await getDoc(docRef);
+
+    if (docSnap.exists()) {
+      console.warn("Document data:", docSnap.data());
+    } else {
+      console.warn("No such document! Currently Creating...");
+      setDoc(docRef, { userName: user.displayName });
+      console.warn(
+        "Document has been created successfully!",
+        (await getDoc(docRef)).data()
+      );
+    }
   });
 }
 
@@ -46,7 +60,7 @@ export function useAuthState(auth: Auth) {
 }
 
 export function useCurrentUser(auth: Auth) {
-  const [currentUser, setCurrentUser] = useState<User | null>(null); // Initial state: no user
+  const [currentUser, setCurrentUser] = useState<User | null>(null);
 
   useEffect(() => {
     const listener = onAuthStateChanged(auth, (user) => {
