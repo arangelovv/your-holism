@@ -5,4 +5,5 @@ export interface AvatarAtomConfig {
   height?: string;
   alt?: string;
   color?: string;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }

@@ -1,4 +1,4 @@
-import { Avatar } from "@mui/material";
+import { Avatar, Box } from "@mui/material";
 import { AvatarAtomConfig } from "../models/avatar.config";
 
 export default function AvatarAtom({
@@ -8,6 +8,7 @@ export default function AvatarAtom({
   height,
   alt,
   color,
+  onClick,
 }: AvatarAtomConfig) {
   return (
     <Avatar
@@ -16,9 +17,11 @@ export default function AvatarAtom({
         width: `${widht}`,
         height: `${height}`,
         bgcolor: `${color}`,
+        cursor: onClick ? "pointer" : "default",
       }}
       alt={alt}
       src={src}
+      onClick={onClick as any}
     />
   );
 }
