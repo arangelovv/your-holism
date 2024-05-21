@@ -40,7 +40,10 @@ export default function TabsOrganism({ tabs }: any) {
                 to={tab.herf}
                 icon={tab.icon}
                 iconPosition={tab.iconPosition}
-                sx={{ textTransform: "none" }}
+                sx={{
+                  textTransform: "none",
+                  minHeight: "48px",
+                }}
               />
             ))}
           </TabList>
