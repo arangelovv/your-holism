@@ -1,5 +1,8 @@
 import { AppBarOrganismConfig } from "../../shared/ui/models/app-bar.config";
 import { TabsOrganismConfig } from "../../shared/ui/models/tabs.config";
+import TodayIcon from "@mui/icons-material/Today";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import AutoGraphIcon from "@mui/icons-material/AutoGraph";
 
 const months: string[] = [
   "January",
@@ -23,16 +26,22 @@ export const tabsConfig: TabsOrganismConfig[] = [
     label: "Journal",
     index: "1",
     herf: "journal",
+    icon: <TodayIcon fontSize="small" />,
+    iconPosition: "start",
   },
   {
     label: `${currentMonth} Stats`,
     index: "2",
     herf: "monthly",
+    icon: <CalendarMonthIcon fontSize="small" />,
+    iconPosition: "start",
   },
   {
     label: "Overall Stats",
     index: "3",
     herf: "overall",
+    icon: <AutoGraphIcon fontSize="small" />,
+    iconPosition: "start",
   },
 ];
 export const appBarConfig: AppBarOrganismConfig = {
