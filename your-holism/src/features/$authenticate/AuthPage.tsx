@@ -2,8 +2,8 @@ import { Box } from "@mui/material";
 import {
   signInWithGoogle,
   useAuthState,
-} from "../../shared/firebase/authentication/firebase.auth";
-import { auth } from "../../shared/firebase/firebase";
+} from "../../LibFacade/firebase/authentication/firebase.auth";
+import { auth } from "../../LibFacade/firebase/firebase";
 
 export default function AuthPage() {
   const authState = useAuthState(auth);

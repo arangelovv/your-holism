@@ -1,21 +1,21 @@
 import { Box } from "@mui/material";
 
-import AvatarAtom from "../../shared/ui/atoms/AvatarAtom";
-import AppBarOrganism from "../../shared/ui/organisms/AppBar.org";
-import TabsOrganism from "../../shared/ui/organisms/Tabs.org";
-import { tabsConfig, appBarConfig } from "./core.config";
+import LogoutIcon from "@mui/icons-material/Logout";
+import LoginIcon from "@mui/icons-material/Login";
+import PersonIcon from "@mui/icons-material/Person";
 import {
   authSignOut,
   signInWithGoogle,
   useCurrentUser,
-} from "../../shared/firebase/authentication/firebase.auth";
-import { auth } from "../../shared/firebase/firebase";
-import MenuMolecule from "../../shared/ui/molecules/MenuMolecule";
+} from "../../LibFacade/firebase/authentication/firebase.auth";
 import { useState } from "react";
-import { MenuItemsConfig } from "../../shared/ui/models/menu.config";
-import LogoutIcon from "@mui/icons-material/Logout";
-import LoginIcon from "@mui/icons-material/Login";
-import PersonIcon from "@mui/icons-material/Person";
+import { auth } from "../../LibFacade/firebase/firebase";
+import AvatarAtom from "../../LibFacade/ui/atoms/AvatarAtom";
+import { MenuItemsConfig } from "../../LibFacade/ui/models/menu.config";
+import MenuMolecule from "../../LibFacade/ui/molecules/MenuMolecule";
+import AppBarOrganism from "../../LibFacade/ui/organisms/AppBar.org";
+import TabsOrganism from "../../LibFacade/ui/organisms/Tabs.org";
+import { appBarConfig, tabsConfig } from "./core.config";
 
 export default function AppCorePage() {
   const currentUser = useCurrentUser(auth);

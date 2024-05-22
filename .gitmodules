@@ -1,0 +1,3 @@
+[submodule "your-holism/src/LibFacade"]
+	path = your-holism/src/LibFacade
+	url = git@rangelovvjobs.github.com:arangelovv/LibFacade.git
