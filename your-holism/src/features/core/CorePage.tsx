@@ -7,14 +7,14 @@ import {
   authSignOut,
   signInWithGoogle,
   useCurrentUser,
-} from "../../LibFacade/firebase/authentication/firebase.auth";
+} from "../../LibFacade/src/firebase/authentication/firebase.auth";
 import { useState } from "react";
-import { auth } from "../../LibFacade/firebase/firebase";
-import AvatarAtom from "../../LibFacade/ui/atoms/AvatarAtom";
-import { MenuItemsConfig } from "../../LibFacade/ui/models/menu.config";
-import MenuMolecule from "../../LibFacade/ui/molecules/MenuMolecule";
-import AppBarOrganism from "../../LibFacade/ui/organisms/AppBar.org";
-import TabsOrganism from "../../LibFacade/ui/organisms/Tabs.org";
+import { auth } from "../../LibFacade/src/firebase/firebase";
+import AvatarAtom from "../../LibFacade/src/ui/atoms/AvatarAtom";
+import { MenuItemsConfig } from "../../LibFacade/src/ui/models/menu.config";
+import MenuMolecule from "../../LibFacade/src/ui/molecules/MenuMolecule";
+import AppBarOrganism from "../../LibFacade/src/ui/organisms/AppBar.org";
+import TabsOrganism from "../../LibFacade/src/ui/organisms/Tabs.org";
 import { appBarConfig, tabsConfig } from "./core.config";
 
 export default function AppCorePage() {

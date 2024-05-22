@@ -1,8 +1,8 @@
 import TodayIcon from "@mui/icons-material/Today";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import AutoGraphIcon from "@mui/icons-material/AutoGraph";
-import { TabsOrganismConfig } from "../../LibFacade/ui/models/tabs.config";
-import { AppBarOrganismConfig } from "../../LibFacade/ui/models/app-bar.config";
+import { TabsOrganismConfig } from "../../LibFacade/src/ui/models/tabs.config";
+import { AppBarOrganismConfig } from "../../LibFacade/src/ui/models/app-bar.config";
 
 const months: string[] = [
   "January",
