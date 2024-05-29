@@ -53,7 +53,7 @@ export default function AppCorePage() {
       ];
 
   return (
-    <Box sx={{ padding: "5px" }}>
+    <Box sx={{ padding: "5px", backgroundColor: "#fafafa" }}>
       <AppBarOrganism {...appBarConfig}>
         <AvatarAtom
           alt={currentUser?.displayName ?? "Default Name"}
@@ -72,7 +72,7 @@ export default function AppCorePage() {
           menuItemBorderRadisu="6px"
         ></MenuMolecule>
       </AppBarOrganism>
-      <TabsOrganism tabs={tabsConfig} />
+      <TabsOrganism tabsConfig={tabsConfig} />
     </Box>
   );
 }
